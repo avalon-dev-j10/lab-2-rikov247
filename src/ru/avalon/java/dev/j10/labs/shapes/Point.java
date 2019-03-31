@@ -12,15 +12,6 @@ package ru.avalon.java.dev.j10.labs.shapes;
  */
 public interface Point {
 
-    /*
-     * TODO: Закончить определение интерфейса 'Point'
-     *
-     * 1. Включите интерфейс в общую систему типов.
-     *
-     * 2. При необходимости, дополните структуру интерфеса.
-     */
-
-
     /**
      * Возвращает абсциссу точки.
      * <p>
@@ -31,7 +22,9 @@ public interface Point {
      *
      * @see <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%B1%D1%81%D1%86%D0%B8%D1%81%D1%81%D0%B0">Абсцисса</a>
      */
-    float getX();
+    default float getX() {
+        return 0;
+    }
 
     /**
      * Возвращает ординату точки.
@@ -39,9 +32,11 @@ public interface Point {
      * Ординатой точки A называется координата этой точки на
      * оси Y в прямоугольной системе координат.
      *
-     * @return н-координату точки
+     * @return y-координату точки
      *
      * @see <a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%80%D0%B4%D0%B8%D0%BD%D0%B0%D1%82%D0%B0">Ордината</a>
      */
-    float getY();
+    default float getY() {
+        return 0;
+    }
 }
